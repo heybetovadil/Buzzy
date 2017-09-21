@@ -4,6 +4,11 @@
 
 
 
+
+
+
+
+
 /* index.html start*/
 
 body {
@@ -40,6 +45,7 @@ body {
 #header .nav {
     text-transform: uppercase;
     height: 58px;
+    position: relative;
 }
 
 #header .nav>ul {
@@ -79,7 +85,7 @@ body {
     border-bottom: 2px solid #333;
 }
 
-#header .nav>ul>li a {
+#header .nav>ul>li>a {
     text-decoration: none;
     display: block;
     width: 100%;
@@ -102,17 +108,136 @@ body {
     margin-right: 2px;
 }
 
-#header .nav li:last-child {
-    position: relative;
-}
-
 #header .nav .popupMenu {
-    top: 0;
-    left: 0;
+    top: 58px;
+    display: none;
+    left: 175px;
     width: 700px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 8px 0 rgba(0, 0, 0, .12);
     position: absolute;
     background-color: white;
+    z-index: 400;
+}
+
+#header .nav .popupMenu::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#header .popupHeader {
+    padding: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+#header .popupHeader h5 {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#header .popupHeader p {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+#header .popupMenu>ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+}
+
+#header .popupMenu>ul>li {
+    width: 25%;
+    text-transform: capitalize;
+    line-height: 2;
+}
+
+#header .popupMenu>ul>li a {
+    padding: 0 10px;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    height: 100%;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    color: #333;
+}
+
+#header .popupMenu>ul>li a:hover {
+    color: black;
+    background-color: #e6e6e6;
+}
+
+#header .popupFooter {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+    -ms-align-items: center;
+    align-items: center;
+    background-color: #f4f4f4!important;
+    padding: 20px;
+}
+
+#header .popupFooter img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+#header .popupFooter .centerFooter ul li {
+    display: inline-block;
+    text-transform: capitalize;
+    margin-right: 10px;
+}
+
+#header .popupFooter .centerFooter ul li:last-child {
+    margin-right: 0;
+}
+
+#header .popupFooter .centerFooter ul li a {
+    color: #333;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+#header .popupFooter .centerFooter ul li a:hover {
+    color: black;
+}
+
+#header .popupFooter .centerFooter p {
+    color: #999;
+    text-transform: capitalize;
+    margin-top: 10px;
 }
 
 #header .headerRight {
@@ -138,6 +263,7 @@ body {
 
 #header .headerRight .logIn {
     margin-left: 20px;
+    color: #333;
 }
 
 #main .carouselContainer>.row>div {
@@ -693,6 +819,11 @@ body {
 
 
 
+
+
+
+
+
 /* index.html end*/
 
 
@@ -1051,6 +1182,11 @@ body {
 .newsItemBody .commentStat .dislike span {
     color: #ad756d;
 }
+
+
+
+
+
 
 
 /*newsItem.html end*/

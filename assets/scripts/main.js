@@ -18,4 +18,9 @@ $(document).ready(function() {
     $('.share').click(function() {
         $(this).next().toggle('fast');
     })
+
+    // popup menu
+    $('.popupHolder').click(function(){
+        $(this).find('.popupMenu').toggle('fast');
+    })
 })
