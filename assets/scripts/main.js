@@ -20,7 +20,17 @@ $(document).ready(function() {
     })
 
     // popup menu
-    $('.popupHolder').click(function(){
+    $('.popupHolder').click(function() {
         $(this).find('.popupMenu').toggle('fast');
+    })
+
+    // login modal
+    $('.logIn').click(function() {
+        $('.blackOverlay').toggle();
+        $('.loginModal').toggle();
+    })
+    $('.close').click(function() {
+        $('.blackOverlay').hide();
+        $('.loginModal').hide();
     })
 })
